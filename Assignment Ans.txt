@@ -1,0 +1,38 @@
+﻿1. How is gas usage calculated?
+Ans.1. Gas usage in a eth transaction is calculated by a formula
+Gas limit * (base fee+tip)
+Ex:-  Transaction is of 1 eth so gas is calculated as 
+21000 is the gas limit and base fee is 100 gwei and let’s set the tip to 20 gwei
+21000*(100+20)= .00252 eth or 2520000 gwei.
+
+
+2. What's the difference between storage, memory, and stack?
+Ans.2 Data in storage is stored permanently and stored on blockchain on the other hand the memory stores data only during the execution of a function and is much cheaper than storage as the data here is not stored to the blockchain while the stack is a place where the temporary variables get stored which are needed for immediate processing.
+
+
+3. What are modifiers used for? Provide an example.
+Ans.3.Modifiers are used to add a prerequisite functionality to the function for ex- if there is a requirement of only admin function instead of applying it to multiple functions as multiple requires just create a modifier of that and use it easily.
+  
+
+
+
+ 
+
+
+
+
+4. What are interfaces in solidity? Write an example interface.
+Ans.4. Interfaces are similar to abstract contracts which contain the function signatures of the implementation contract they can not have state variables but can have enums and structs. Interfaces are useful for ex. If you want to call contracts’ functions but the contract is already deployed the best way to do that is call the functions through the interface of that contract.
+Example in present in the repo contracts.
+
+
+
+
+5.What is a proxy contract? Provide a code example of how it can be used.
+Ans.5. A proxy contract is used mainly for upgradeability purposes 
+It delegate calls the implementation contract so the the proxy stays unchangeable while the implementation contract can be newly deployed
+By simply changing the target address inside the proxy.
+
+
+6.Fix the code below so it will function as intended.
+Ans.6. Fixed code is in the repo with its interface as ex for que 4.
